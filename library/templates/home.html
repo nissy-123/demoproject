@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-3">
+    <h1>Welcome to Library Home Page</h1></div>
+{% if user.is_authenticated %}
+<h5>{{user.username}}</h5>
+{% else %}
+<h5>Guest</h5>
+{% endif %}
+<!--<a href="{% url 'books:home' %}">Home</a>
+<a href="{% url 'books:add' %}">Add Books</a>
+<a href="{% url 'books:view' %}">ViewBooks</a>
+<a href="{% url 'users:register' %}">Register</a>
+<a href="{% url 'users:login' %}">Login</a>-->
+{% endblock %}
